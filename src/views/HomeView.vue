@@ -4,6 +4,8 @@
 
     <section v-for="image in images" :key="image._id">
       <h1>{{ image.title }}</h1>
+      <p>{{ image.description }}</p>
+      <img :src="image.links.file" alt="Imagem">
     </section>
   </main>
 </template>
@@ -19,7 +21,7 @@
 
       const fetch = () => {
         api.get("/image").then(response => {
-          console.log(response.data.images); images.value = response.data.images
+          images.value = response.data.images
         })
       }
 
