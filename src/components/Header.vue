@@ -86,7 +86,7 @@
 
   .header nav ul .account-links {
     display: flex;
-    border-left: 1px solid #000;
+    border-left: 1px solid #c3c3c3;
     margin-left: 10px;
   }
 
@@ -95,12 +95,7 @@
   }
 
   .header nav ul li a.router-link-exact-active {
-      background-color: #000;
-      color: #FFF;
-  }
-
-  .header nav ul li a.router-link-exact-active:hover {
-    background-color: #eedb63;
-    color: #000;
+      background-color: #eedb63;
+      color: #000;
   }
 </style>

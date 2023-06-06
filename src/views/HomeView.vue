@@ -1,9 +1,7 @@
 <template>
   <main class="home">
-    <section v-for="image in images" :key="image._id">
-      <h1>{{ image.title }}</h1>
-      <p>{{ image.description }}</p>
-      <img :src="image.links.file" :alt="image.description">
+    <section class="images-container">
+      <img :src="image.links.file" :alt="image.description" v-for="image in images" :key="image._id">
     </section>
   </main>
 </template>
@@ -33,5 +31,17 @@
 <style scoped>
   .home {
     padding: 30px;
+  }
+
+  .images-container {
+    column-count: 4;
+    column-gap: 10px;
+  }
+
+  .images-container img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-bottom: 10px;
   }
 </style>
