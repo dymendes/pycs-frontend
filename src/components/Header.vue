@@ -13,18 +13,15 @@
     <nav>
         <ul>
             <li><RouterLink to="/">Home</RouterLink></li>
-            <li><RouterLink to="/">Criar conta</RouterLink></li>
-            <li><RouterLink to="/">Entrar</RouterLink></li>
+            
+            <div class="account-links">
+              <li><RouterLink to="/user/signup">Criar conta</RouterLink></li>
+              <li><RouterLink to="/user/signin">Entrar</RouterLink></li>
+            </div>
         </ul>
     </nav>
   </header>
 </template>
-
-<script>
-  export default {
-
-  }
-</script>
 
 <style scoped>
   .header {
@@ -76,15 +73,34 @@
   }
 
   .header nav ul li + li {
-      margin-left: 20px;
+      margin-left: 5px;
   }
 
   .header nav ul li a {
       text-decoration: none;
       color: #000;
+      padding: 10px;
+      transition: all 0.3s;
+      border-radius: 5px;
+  }
+
+  .header nav ul .account-links {
+    display: flex;
+    border-left: 1px solid #000;
+    margin-left: 10px;
   }
 
   .header nav ul li a:hover {
-      color: #666565;
+      color: #eedb63;
+  }
+
+  .header nav ul li a.router-link-exact-active {
+      background-color: #000;
+      color: #FFF;
+  }
+
+  .header nav ul li a.router-link-exact-active:hover {
+    background-color: #eedb63;
+    color: #000;
   }
 </style>

@@ -3,7 +3,7 @@
     <section v-for="image in images" :key="image._id">
       <h1>{{ image.title }}</h1>
       <p>{{ image.description }}</p>
-      <img :src="image.links.file" alt="Imagem">
+      <img :src="image.links.file" :alt="image.description">
     </section>
   </main>
 </template>
