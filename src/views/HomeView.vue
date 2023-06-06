@@ -1,7 +1,5 @@
 <template>
   <main class="home">
-    <h1>Home</h1>
-
     <section v-for="image in images" :key="image._id">
       <h1>{{ image.title }}</h1>
       <p>{{ image.description }}</p>
