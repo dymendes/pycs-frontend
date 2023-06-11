@@ -1,13 +1,17 @@
 @import './base.css';
 
-  a.router-link-exact-active {
-    color: var(--color-text);
-  }
+a.router-link-exact-active {
+  color: var(--color-text);
+}
 
-  a.router-link-exact-active:hover {
-    background-color: transparent;
-  }
+a.router-link-exact-active:hover {
+  background-color: transparent;
+}
 
-  a {
-    display: flex;
-  }
+a {
+  display: flex;
+}
+
+img {
+  user-select: none;
+}

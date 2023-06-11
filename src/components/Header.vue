@@ -88,6 +88,7 @@
     display: flex;
     border-left: 1px solid #c3c3c3;
     margin-left: 10px;
+    padding-left: 10px;
   }
 
   .header nav ul li a:hover {
