@@ -1,6 +1,7 @@
 <template>
   <picture class="images-container">
-    <img :src="image.links.file" :alt="image.description" v-for="image in images" :key="image._id">
+    <img :src="image.links.file" :alt="image.description" 
+      v-for="image in images" :key="image._id">
   </picture>
 </template>
 
