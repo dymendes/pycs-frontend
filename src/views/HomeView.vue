@@ -1,7 +1,7 @@
 <template>
-  <section class="images-container">
+  <picture class="images-container">
     <img :src="image.links.file" :alt="image.description" v-for="image in images" :key="image._id">
-  </section>
+  </picture>
 </template>
 
 <script>
@@ -28,6 +28,7 @@
 
 <style scoped>
   .images-container {
+    display: block;
     column-count: 4;
     column-gap: 10px;
   }
