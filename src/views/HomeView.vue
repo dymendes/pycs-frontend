@@ -1,8 +1,9 @@
 <template>
-  <picture class="images-container">
-    <img :src="image.links.file" :alt="image.description" 
-      v-for="image in images" :key="image._id">
-  </picture>
+  <section class="images-container">
+    <picture v-for="image in images" :key="image._id">
+      <img :src="image.links.file" :alt="image.description">
+    </picture>
+  </section>
 </template>
 
 <script>
@@ -29,16 +30,13 @@
 
 <style scoped>
   .images-container {
-    display: block;
-    column-count: 4;
-    column-gap: 10px;
+    display: flex;
   }
 
-  .images-container img {
+  .images-container picture img {
     width: 100%;
     height: 100%;
     border-radius: 15px;
     object-fit: cover;
-    margin-bottom: 10px;
   }
 </style>
