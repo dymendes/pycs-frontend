@@ -31,7 +31,7 @@
 <style scoped>
   .images-container {
     display: grid;
-    grid-template-columns: 1fr 1.2fr 0.8fr 1.5fr 1fr;
+    grid-template-columns: 1fr 1.2fr 0.85fr 1.35fr 1fr;
     column-gap: 15px;
   }
 
@@ -42,7 +42,7 @@
 
   .images-container picture img {
     width: 100%;
-    max-height: 500px;
+    max-height: 450px;
     border-radius: 15px;
     object-fit: cover;
     transition: all 0.3s;
