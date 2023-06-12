@@ -32,7 +32,12 @@
   .images-container {
     display: grid;
     grid-template-columns: 1fr 1.2fr 0.8fr 1.5fr 1fr;
-    gap: 15px;
+    column-gap: 15px;
+  }
+
+  .images-container picture {
+    display: grid;
+    align-content: center;
   }
 
   .images-container picture img {
