@@ -30,9 +30,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
-    background-color: rgba(255, 255, 255, .5);
+    background-color: #ffffff80;
     backdrop-filter: blur(5px);
-    box-shadow: 3px 3px 15px #c3c3c3;
+    position: fixed;
+    top: 0;
+    box-shadow: 1px 1px 20px 0px #c3c3c3;
+    z-index: 10;
   }
 
   .header .logo {

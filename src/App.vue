@@ -16,6 +16,7 @@
 
 <style scoped>
   main {
+    margin-top: 100px;
     padding: 30px 100px;
   }
 </style>

@@ -1,7 +1,14 @@
 <template>
   <section class="images-container">
     <picture v-for="image in images" :key="image._id">
-      <img :src="image.links.file" :alt="image.description">
+      <RouterLink :to="{
+        name: 'picture',
+        params: {
+          id: image._id
+        }
+      }">
+        <img :src="image.links.file" :alt="image.description">
+      </RouterLink>
     </picture>
   </section>
 </template>
@@ -32,7 +39,7 @@
   .images-container {
     display: grid;
     grid-template-columns: 1fr 1.2fr 0.85fr 1.35fr 1fr;
-    column-gap: 15px;
+    gap: 15px;
   }
 
   .images-container picture {
@@ -46,5 +53,10 @@
     border-radius: 15px;
     object-fit: cover;
     transition: all 0.3s;
+  }
+
+  .images-container picture img:hover {
+    filter: grayscale(0.8);
+    cursor: pointer;
   }
 </style>
