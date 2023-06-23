@@ -23,7 +23,7 @@
   </header>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
   .header {
     width: 100%;
     display: flex;
@@ -36,70 +36,70 @@
     top: 0;
     box-shadow: 1px 1px 20px 0px #c3c3c3;
     z-index: 10;
-  }
 
-  .header .logo {
-    width: 80px;
-  }
+      .logo {
+        width: 80px;
+      }
 
-  .header form {
-    position: relative; 
-    width: 50%;
-  }
+      form {
+        position: relative; 
+        width: 50%;
 
-  .header form .search-icon {
-    width: 30px;
-    position: absolute;
-    top: 7px;
-    left: 15px;
-  }
+          .search {
+            width: 100%;
+            padding: 10px 30px 10px 55px;
+            border: 3px solid #eedb63;
+            border-radius: 30px;
+            outline: none;
+            font-size: 1em;
 
-  .header .search {
-    width: 100%;
-    padding: 10px 30px 10px 55px;
-    border: 3px solid #eedb63;
-    border-radius: 30px;
-    outline: none;
-    font-size: 1em;
-  }
+              &::-webkit-search-cancel-button {
+                width: 20px;
+                height: 20px;
+                -webkit-appearance: none;
+                background: url("@/assets/icons/cancel.svg") center no-repeat;
+              }
+          }
 
-  .header .search::-webkit-search-cancel-button {
-    width: 20px;
-    height: 20px;
-    -webkit-appearance: none;
-    background: url("@/assets/icons/cancel.svg") center no-repeat;
-  }
+          .search-icon {
+            width: 30px;
+            position: absolute;
+            top: 7px;
+            left: 15px;
+          }
+      }
+      
+      nav ul {
+        display: flex;
+        list-style: none;
 
-  .header nav ul {
-      display: flex;
-      list-style: none;
-  }
+          li a {
+            text-decoration: none;
+            color: #000;
+            padding: 10px;
+            transition: all 0.3s;
+            border-radius: 5px;
 
-  .header nav ul li + li {
-      margin-left: 5px;
-  }
+              &:hover {
+                  color: #eedb63;
+                }
 
-  .header nav ul li a {
-      text-decoration: none;
-      color: #000;
-      padding: 10px;
-      transition: all 0.3s;
-      border-radius: 5px;
-  }
+              &.router-link-exact-active {
+                background-color: #eedb63;
+                color: #000;
+              }
+          }
+      }
 
-  .header nav ul .account-links {
-    display: flex;
-    border-left: 1px solid #c3c3c3;
-    margin-left: 10px;
-    padding-left: 10px;
-  }
+      li + li {
+        margin-left: 5px;
+      }
 
-  .header nav ul li a:hover {
-      color: #eedb63;
-  }
-
-  .header nav ul li a.router-link-exact-active {
-      background-color: #eedb63;
-      color: #000;
+      .account-links {
+        display: flex;
+        border-left: 1px solid #c3c3c3;
+        margin-left: 10px;
+        padding-left: 10px;
+      }
   }
 </style>

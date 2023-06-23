@@ -14,7 +14,7 @@
   <Footer />
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
   main {
     margin-top: 100px;
     padding: 30px 100px;
