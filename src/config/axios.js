@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const api = axios.create({
-  baseURL: "http://15.229.47.17:3000"
+  baseURL: "https://api.pycs.site"
 })
 
 export default api
